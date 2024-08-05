@@ -10,7 +10,7 @@ export default class PermissionForm {
         return i18n.tr;
     })();
 
-    i18nFileInit(path: string = /* ".\\plugins\\PPOUI\\LSE-OPTools\\lang\\perm\\" */ this.i18nStoragePath): boolean {
+    i18nFileInit(path: string = /* ".\\plugins\\engsr6982\\LSE-OPTools\\lang\\perm\\" */ this.i18nStoragePath): boolean {
         try {
             // logger.warn("p: " + path);
             // logger.warn(new Error().stack);

@@ -3,7 +3,7 @@ module.exports = {
     introduce: "cmd执行后台命令",
     version: [1, 0, 0],
     otherInformation: {
-        Author: "PPOUI",
+        Author: "engsr6982",
     },
 
     type: "consolecmd",

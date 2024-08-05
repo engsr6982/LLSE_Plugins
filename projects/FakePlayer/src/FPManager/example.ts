@@ -1,4 +1,4 @@
-import { time } from "../../../LSE-Modules/src/Time.js";
+import { time } from "../modules/Time.js";
 import { levelDB } from "../DB/LevelDB.js";
 import { onDummyLookPos, onDummyOffline, onDummyOnline, onDummySimulationOperation, onDummyTryRespawn } from "../Event/ListenerEvent.js";
 import { Config } from "../utils/config.js";

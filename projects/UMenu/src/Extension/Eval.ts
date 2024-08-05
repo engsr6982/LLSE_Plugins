@@ -3,7 +3,7 @@ module.exports = {
     introduce: "代码运行支持",
     version: [1, 0, 0],
     otherInformation: {
-        Author: "PPOUI",
+        Author: "engsr6982",
     },
 
     type: "eval",

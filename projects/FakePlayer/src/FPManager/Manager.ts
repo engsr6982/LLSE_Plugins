@@ -2,7 +2,7 @@ import { dummyExample } from "./example.js";
 import { sql } from "../DB/SQL.js";
 import { instanceCache } from "./instanceCache.js";
 import { levelDB } from "../DB/LevelDB.js";
-import { time as Time_Mod } from "../../../LSE-Modules/src/Time.js";
+import { time as Time_Mod } from "../modules/Time.js";
 import { Config } from "../utils/config.js";
 
 export class FPManager {

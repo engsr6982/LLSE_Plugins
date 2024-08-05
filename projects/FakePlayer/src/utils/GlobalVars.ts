@@ -3,7 +3,7 @@ export const pluginInformation = {
     name: "FakePlayer",
     introduce: "模拟玩家/假人",
     version: [5, 0, 0, Version.Release] as readonly [number, number, number, Version],
-    author: "PPOUI",
+    author: "engsr6982",
 };
 /**消息前缀 */
 

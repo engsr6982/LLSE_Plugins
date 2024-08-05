@@ -1,0 +1,59 @@
+# name: Build UMenu
+
+# on:
+#     push:
+#         paths:
+#             - .github/workflows/Build-UMenu.yml
+#             - projects/UMenu/**
+#     pull_request:
+#         paths:
+#             - .github/workflows/Build-UMenu.yml
+#             - projects/UMenu/**
+#     workflow_dispatch:
+
+# # Build作业
+# jobs:
+#     dist:
+#         runs-on: ubuntu-latest
+#         steps:
+#             - name: 检出仓库代码
+#               uses: actions/checkout@v3
+#               with:
+#                   submodules: true
+
+#             - name: 安装 Node.js 18
+#               uses: actions/setup-node@v1
+#               with:
+#                   node-version: "18"
+
+#             - name: 安装 7z
+#               run: sudo apt-get install p7zip-full
+
+#             - name: 安装 pnpm
+#               uses: pnpm/action-setup@v2
+#               with:
+#                   version: 8
+
+#             - name: HelperLib => lse
+#               run: |
+#                 cd ./HelperLib
+#                 git checkout lse
+#                 git branch
+#                 cd ../
+
+#             - name: 运行 pnpm install
+#               run: pnpm install
+
+#             - name: 单独编译 UMenu
+#               run: pnpm -r --filter=./projects/UMenu run build
+
+#             - name: 运行 npm run pack
+#               run: npm run pack ./projects/UMenu/dist/UMenu.js
+
+#             - name: 上传文件
+#               uses: actions/upload-artifact@v2
+#               with:
+#                   name: UMenu
+#                   path: UMenu-*.zip
+#                   # 没有找到文件则报错
+#                   if-no-files-found: error

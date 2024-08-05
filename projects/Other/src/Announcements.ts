@@ -5,7 +5,7 @@ const PLUGINS_JS = `${PLUGINS_NAME}服务器公告插件`;
 // @ts-ignore
 const PLUGINS_VERSION = [2, 2, 0, Version.Release] as readonly [number, number, number, Version];
 // @ts-ignore
-const PLUGINS_ZZ = "PPOUI";
+const PLUGINS_ZZ = "engsr6982";
 // @ts-ignore
 const PLUGINS_URL = "https://www.minebbs.com/resources/server_announcements.5218/";
 ll.registerPlugin(
@@ -19,7 +19,7 @@ ll.registerPlugin(
 );
 
 // 配置文件
-const Conf_Path = `.\\Plugins\\PPOUI\\${PLUGINS_NAME}\\`;
+const Conf_Path = `.\\Plugins\\engsr6982\\${PLUGINS_NAME}\\`;
 // @ts-ignore
 const Config = data.openConfig(
     Conf_Path + "Config.json",

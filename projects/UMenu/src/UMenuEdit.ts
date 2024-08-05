@@ -1,7 +1,7 @@
 const pluginInfo = {
     name: "UMenu Edit",
     version: [1, 0, 0, Version.Release] as readonly [number, number, number, Version],
-    author: "PPOUI",
+    author: "engsr6982",
 };
 
 // ================================================================================ copy modules
@@ -626,7 +626,7 @@ function SelectType(pl: Player, Callback: (type: number) => any) {
 
 // ================================================================================ plugin end
 
-logger.setLogLevel(5);
+// logger.setLogLevel(5);
 ll.registerPlugin(pluginInfo.name, pluginInfo.name, pluginInfo.version, { "Author: ": pluginInfo.author });
 mc.listen("onServerStarted", () => {
     const cmd = mc.newCommand("umenuedit", "UMenu编辑器", PermType.Any);
@@ -638,6 +638,5 @@ mc.listen("onServerStarted", () => {
     cmd.setup();
 });
 
-logger.info("作者： PPOUI");
+logger.info("作者： engsr6982");
 logger.info("版本: " + pluginInfo.version.join().replace(/,/g, "."));
-logger.warn("编辑器不稳定测试中！ 请勿用于生产环境!");

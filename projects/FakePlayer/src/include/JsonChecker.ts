@@ -1,4 +1,4 @@
-import JSONChecker from "../../../LSE-Modules/src/JSONChecker.js";
+import JSONChecker from "../modules/JSONChecker.js";
 import { Config, ConfigOperation, __inits } from "../utils/config.js";
 
 export async function CheckConfigFile() {

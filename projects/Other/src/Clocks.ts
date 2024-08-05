@@ -2,7 +2,7 @@
 const PLUHINS_NAME = "CLOCKS";
 const PLUHINS_JS = "CLOCKS进服欢迎";
 // @ts-ignore
-const PLUGINS_ZZ = "PPOUI";
+const PLUGINS_ZZ = "engsr6982";
 // @ts-ignore
 const PLUGINS_VERSION = [3, 1, 0];
 // @ts-ignore
@@ -23,7 +23,7 @@ logger.setTitle(`${PLUHINS_NAME}`);
 logger.setConsole(true, 4);
 
 /********************#配置文件#********************/
-const _filePath = `.\\Plugins\\PPOUI\\${PLUHINS_NAME}\\`;
+const _filePath = `.\\Plugins\\engsr6982\\${PLUHINS_NAME}\\`;
 // @ts-ignore
 const Config = data.openConfig(
     _filePath + "Config.json",

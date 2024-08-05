@@ -1,4 +1,4 @@
-import { SimpleFormWithBack } from "../../../LSE-Modules/src/form/SimpleForms.js";
+import { SimpleFormWithBack } from "../modules/form/SimpleForms.js";
 import { FPManager } from "../FPManager/Manager.js";
 import { pluginInformation } from "../utils/GlobalVars.js";
 import { closeForm, input_Null, selectDummy } from "./Tools.js";

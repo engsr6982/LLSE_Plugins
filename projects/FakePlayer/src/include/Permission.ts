@@ -1,5 +1,5 @@
-import PermissionCore from "../../../LSE-Modules/src/Permission/PermissionCore.js";
-import PermissionForm from "../../../LSE-Modules/src/Permission/PermissionForm.js";
+import PermissionCore from "../modules/Permission/PermissionCore.js";
+import PermissionForm from "../modules/Permission/PermissionForm.js";
 import { _filePath } from "../utils/config.js";
 
 export const permissionCore = new PermissionCore(`${_filePath}data\\permission.json`, true);

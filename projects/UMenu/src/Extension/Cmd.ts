@@ -3,7 +3,7 @@ module.exports = {
     introduce: "玩家执行命令",
     version: [1, 0, 0],
     otherInformation: {
-        author: "PPOUI",
+        author: "engsr6982",
     },
 
     type: "cmd",

@@ -1,4 +1,4 @@
-import CsvLogger from "../../../LSE-Modules/src/CsvLogger.js";
+import CsvLogger from "../modules/CsvLogger.js";
 import { FPManager } from "../FPManager/Manager.js";
 import { Config } from "../utils/config.js";
 

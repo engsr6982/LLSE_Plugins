@@ -3,7 +3,7 @@ module.exports = {
     introduce: "Tag检测",
     version: [1, 0, 0],
     otherInformation: {
-        Author: "PPOUI",
+        Author: "engsr6982",
     },
 
     type: "tag",

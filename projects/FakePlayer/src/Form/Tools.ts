@@ -1,7 +1,7 @@
 import { FPManager } from "../FPManager/Manager.js";
 import { Gm_Tell, pluginInformation } from "../utils/GlobalVars.js";
 import { dummyExample } from "../FPManager/example.js";
-import { SimpleFormWithBack } from "../../../LSE-Modules/src/form/SimpleForms.js";
+import { SimpleFormWithBack } from "../modules/form/SimpleForms.js";
 
 export function noPermissions(player: Player) {
     return player.tell(Gm_Tell + `无权限`);

@@ -1,4 +1,4 @@
-import { SimpleFormWithBack } from "../../../LSE-Modules/src/form/SimpleForms.js";
+import { SimpleFormWithBack } from "../modules/form/SimpleForms.js";
 import { instanceCache } from "../FPManager/instanceCache.js";
 import { permissionCore } from "../include/Permission.js";
 import { Gm_Tell, pluginInformation } from "../utils/GlobalVars.js";

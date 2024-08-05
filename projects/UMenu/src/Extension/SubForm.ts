@@ -3,7 +3,7 @@ module.exports = {
     introduce: "子表单扩展",
     version: [1, 0, 0],
     otherInformation: {
-        Author: "PPOUI",
+        Author: "engsr6982",
     },
 
     type: "subform",

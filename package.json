@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "scripts": {
     "build": "pnpm -r --filter=./projects/* run build",
-    "pack": "node ./#tools/pack.js",
     "lint": "eslint projects/**/*.ts",
     "lint:fix": "eslint projects/**/*.ts --fix"
   },

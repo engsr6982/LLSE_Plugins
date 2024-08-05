@@ -1,5 +1,5 @@
 import { closeForm } from "./Tools.js";
-import { SimpleForms } from "../../../LSE-Modules/src/form/SimpleForms.js";
+import { SimpleForms } from "../modules/form/SimpleForms.js";
 import { pluginInformation } from "../utils/GlobalVars.js";
 import { fakePlayerManager } from "./FakePlayerManager.js";
 import { simulatedOperations } from "./SimulatedOperation.js";

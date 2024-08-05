@@ -2,7 +2,7 @@ const pluginInformation = {
     name: "UMenu",
     introduce: "菜单插件",
     version: [1, 2, 0],
-    author: "github/engsr6982  minebbs/PPPOUI",
+    author: "github/engsr6982  minebbs/Pengsr6982",
 };
 
 // Color Copy the github.com/engsr6982/LSE-Modules

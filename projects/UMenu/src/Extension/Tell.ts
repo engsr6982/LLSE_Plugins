@@ -3,7 +3,7 @@ module.exports = {
     introduce: "发送文本扩展",
     version: [1, 0, 0],
     otherInformation: {
-        Autor: "PPOUI",
+        Autor: "engsr6982",
     },
 
     type: "tell",

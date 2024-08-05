@@ -2,7 +2,7 @@
   "extends": "../../tsconfig.json",
   "include": [
     "src",
-    "include",
+    "types",
     "../../node_modules/helperlib/src/**/*"
   ],
   "compilerOptions": {

@@ -124,7 +124,7 @@ class MoneyApi {
         introduce: "UMenu经济支持扩展",
         version: [1, 0, 0],
         otherInformation: {
-            author: "PPOUI",
+            author: "engsr6982",
         },
 
         type: "umenu_inside_moneyapi",
