@@ -3,12 +3,9 @@
   "include": [
     "src",
     "include",
-    "../../HelperLib/src",
+    "../../node_modules/helperlib/src/**/*"
   ],
   "compilerOptions": {
-    "outDir": "./dist",
-    "noImplicitAny": true, // 禁止隐式Any
-    // "removeComments": false, 
-    // "declaration": true
+    "outDir": "./dist"
   }
 }

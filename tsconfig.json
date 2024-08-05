@@ -16,10 +16,7 @@
     "noFallthroughCasesInSwitch": true, // switch case 必须有 break/return/throw
   },
   "exclude": [
-    "**/.*.ts",
-    "**/.*.d.ts",
     "**/dist/**/*",
-    "**/docs/**/*",
     "./#tools/**",
   ]
 }

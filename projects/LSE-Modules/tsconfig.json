@@ -2,10 +2,10 @@
   "extends": "../../tsconfig.json",
   "include": [
     "./src",
-    "../../HelperLib/src"
+    "../../node_modules/helperlib/src/**/*"
   ],
   "compilerOptions": {
-    "outDir": "./dist",
-    "declaration": true
+    "declaration": true,
+    "outDir": "./dist"
   }
 }

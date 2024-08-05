@@ -2,11 +2,10 @@
   "extends": "../../tsconfig.json",
   "include": [
     "src",
-    "../../HelperLib/src",
-    "../LSE-Modules/src/Permission/tab.d.ts"
+    "../LSE-Modules/src/Permission/tab.d.ts",
+    "../../node_modules/helperlib/src/**/*"
   ],
   "compilerOptions": {
-    "outDir": "./dist",
-    "noImplicitAny": true // 禁止隐式Any
+    "outDir": "./dist"
   }
 }

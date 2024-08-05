@@ -104,7 +104,7 @@ class SQL {
                     isAutoOnline: this.bool2Number(dt.isAutoOnline),
                     onlinePos: JSON.stringify(pos2Object(dt.onlinePos)),
                     bagGUIDKey: dt.bagGUIDKey,
-                })
+                }) // @ts-ignore
                 .execute();
             return this;
         } catch (e) {
@@ -120,7 +120,7 @@ class SQL {
                 .bind({
                     bindPlayer: bindPlayer,
                     name: name,
-                })
+                }) // @ts-ignore
                 .fetch() || null
         );
     }
@@ -131,7 +131,7 @@ class SQL {
                 .prepare(`SELECT * FROM "${tableName}" WHERE name = $name`)
                 .bind({
                     name: name,
-                })
+                }) // @ts-ignore
                 .fetch() || null
         );
     }
@@ -155,7 +155,7 @@ class SQL {
             .prepare(`SELECT * FROM "${tableName}" WHERE bindPlayer = $bindPlayer`)
             .bind({
                 bindPlayer: bindPlayer,
-            })
+            }) // @ts-ignore
             .fetchAll();
         if (result != null) {
             result.shift();
@@ -180,7 +180,7 @@ class SQL {
                 .bind({
                     bindPlayer: bindPlayer,
                     name: name,
-                })
+                }) // @ts-ignore
                 .execute();
             return true;
         } catch (error) {
