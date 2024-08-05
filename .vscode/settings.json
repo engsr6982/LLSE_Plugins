@@ -1,8 +1,6 @@
 {
     "editor.formatOnSave": true,
-    "extension.llseaids.reloadCommand": "ll reload \"OPTools\"",
     "workbench.colorTheme": "Default Dark Modern",
     "prettier.endOfLine": "auto",
-    "extension.llseaids.bdsPath": "c:/myfiles/bedrock-server-1.20.11",
     "typescript.preferences.importModuleSpecifierEnding": "js"
 }
