@@ -2,6 +2,7 @@
   "name": "lse-workspace",
   "version": "1.0.0",
   "scripts": {
+    "auto": ".\\tools\\jse.exe -f .\\tools\\AutoBuild.js",
     "build": "pnpm -r --filter=./projects/* run build",
     "lint": "eslint projects/**/*.ts",
     "lint:fix": "eslint projects/**/*.ts --fix"

@@ -5,8 +5,6 @@ const pluginInformation = {
     author: "github/engsr6982  minebbs/Pengsr6982",
 };
 
-// Color Copy the github.com/engsr6982/LSE-Modules
-
 const Color = {
     /** 黑色 */
     black: "\x1b[30m",
