@@ -17,17 +17,17 @@ jobs:
         steps:
             - uses: actions/checkout@v3
 
-            - uses: actions/setup-node@v1
+            - uses: actions/setup-node@v4
+              with:
+                  node-version: 18
 
             - uses: pnpm/action-setup@v4
               with:
                   version: 8
 
-            - name: Run pnpm install
-              run: pnpm install
+            - run: pnpm install
 
-            - name: Run npm run auto
-              run: npm run auto
+            - run: npm run auto
 
             - uses: actions/upload-artifact@v4
               with:
