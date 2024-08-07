@@ -23,6 +23,11 @@ function generatorManifests(name, entry, path) {
     colorLog("pink", "Generated manifest.json for " + name);
 }
 
+function generatorFakeEntry(genPath, targetFile) {
+    const data = `import * as _114514_ from "${targetFile}";`;
+    os.writeTo(`${genPath}/entry.js`, data);
+}
+
 function copyAll() {
     console.log("Copying all projects and files...");
 
@@ -46,7 +51,9 @@ function copyAll() {
             os.copy(`${fakePlayerDir}/README.md`, fakePlayerBinDir);
         } else console.warn("No README.md found in FakePlayer");
         colorLog("green", "Copied FakePlayer");
-        generatorManifests("FakePlayer", "dist/index.js", `${fakePlayerBinDir}/FakePlayer`);
+
+        generatorFakeEntry(`${fakePlayerBinDir}/FakePlayer`, "./plugins/FakePlayer/dist/index.js");
+        generatorManifests("FakePlayer", "entry.js", `${fakePlayerBinDir}/FakePlayer`);
     }
 
     // copy UMenu、UMenuEdit、UMenuExtension
