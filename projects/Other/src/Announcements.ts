@@ -126,11 +126,7 @@ function UPDATE_BACKUP(ClearPlayer = false): void {
  */
 function PROFILE_CHECK() {
     if (!RegExp(/[0-2]/g).test(Config.get("INSPECTION_MODE"))) {
-        logger.error(
-            `检测到配置项“检测模式(INSPECTION_MODE)”配置错误,允许值0,1,2,当前配置值:${Config.get(
-                "INSPECTION_MODE",
-            )}\n详细内容请前往MineBBS查看，链接:${PLUGINS_URL}`,
-        );
+        logger.error(`检测到配置项“检测模式(INSPECTION_MODE)”配置错误,允许值0,1,2,当前配置值:${Config.get("INSPECTION_MODE")}`);
     }
 }
 
