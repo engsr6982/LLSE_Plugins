@@ -2,7 +2,7 @@ const pluginInformation = {
     name: "UMenu",
     introduce: "菜单插件",
     version: [1, 2, 0],
-    author: "github/engsr6982  minebbs/Pengsr6982",
+    author: "engsr6982",
 };
 
 const Color = {
