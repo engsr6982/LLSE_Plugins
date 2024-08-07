@@ -3,6 +3,10 @@
 /// <reference path="./API.d.ts" />
 
 function buildAll() {
+    if (os.exists(os.path + "/bin")) {
+        console.warn("bin directory already exists, deleting...");
+        os.delete(os.path + "/bin");
+    }
     console.log("Building all projects...");
     os.cmd(`npm run build`); // 编译所有项目
     colorLog("green", "Build finished!");

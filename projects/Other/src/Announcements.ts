@@ -182,5 +182,5 @@ function Close_Tell(pl: Player) {
     pl.tell(Gm_Tell + Config.get("PROMPT_CONTENT"));
 }
 // 输出插件信息
-colorLog("green", `插件版本: ${PLUGIN.name}`);
+colorLog("green", `插件版本: ${PLUGIN.version}`);
 colorLog("green", `插件作者: engsr6982`);
