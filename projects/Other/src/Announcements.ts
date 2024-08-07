@@ -1,6 +1,6 @@
 const PLUGIN = {
     name: "Announcements",
-    version: "2.1.0",
+    version: "2.3.0",
 };
 
 // 配置文件
