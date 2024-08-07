@@ -19,7 +19,7 @@ export const __inits = {
 };
 
 /**文件路径 */
-export const _filePath = `.\\Plugins\\${pluginInformation.author}\\${pluginInformation.name}\\`;
+export const _filePath = `.\\Plugins\\${pluginInformation.name}\\`;
 
 /**配置文件 */
 export let Config = __inits.config;
