@@ -1,31 +1,16 @@
-// 妈的，为什么之前不写注释，现在还要理解这坨答辩  太草了
-
-const PLUGINS_NAME = "Server_Announcements";
-const PLUGINS_JS = `${PLUGINS_NAME}服务器公告插件`;
-// @ts-ignore
-const PLUGINS_VERSION = [2, 2, 0, Version.Release] as readonly [number, number, number, Version];
-// @ts-ignore
-const PLUGINS_ZZ = "engsr6982";
-// @ts-ignore
-const PLUGINS_URL = "https://www.minebbs.com/resources/server_announcements.5218/";
-ll.registerPlugin(
-    /* name */ PLUGINS_NAME,
-    /* introduction */ PLUGINS_JS,
-    /* version */ PLUGINS_VERSION,
-    /* otherInformation */ {
-        作者: PLUGINS_ZZ,
-        下载链接: PLUGINS_URL,
-    },
-);
+const PLUGIN = {
+    name: "Announcements",
+    version: "2.1.0",
+};
 
 // 配置文件
-const Conf_Path = `.\\Plugins\\engsr6982\\${PLUGINS_NAME}\\`;
+const Conf_Path = `.\\Plugins\\Announcements\\${PLUGIN.name}\\`;
 // @ts-ignore
 const Config = data.openConfig(
     Conf_Path + "Config.json",
     "json",
     JSON.stringify({
-        version: "2.1.0", //配置文件版本
+        version: PLUGIN.version, //配置文件版本
         Command: {
             name: "sa", // 顶层命令
             alias: "公告", //命令别名
@@ -65,8 +50,7 @@ function regCommand() {
                     if (Config.get("BACKUP") == "") {
                         UPDATE_BACKUP();
                     } else {
-                        if (Config.get("BACKUP") == Config.get("CONTENT")) {
-                        } else {
+                        if (Config.get("BACKUP") != Config.get("CONTENT")) {
                             logger.info("检测到公告变更，正在处理...");
                             UPDATE_BACKUP(true);
                         }
@@ -77,9 +61,7 @@ function regCommand() {
                 PROFILE_CHECK();
                 break;
             default:
-                if (!ori.player) {
-                    return out.error("此命令仅限玩家执行！");
-                }
+                if (!ori.player) return out.error("此命令仅限玩家执行！");
                 MainGUI(ori.player, 1);
                 PROFILE_CHECK();
                 break;
@@ -95,8 +77,7 @@ function regCommand() {
             if (Config.get("BACKUP") == "") {
                 UPDATE_BACKUP();
             } else {
-                if (Config.get("BACKUP") == Config.get("CONTENT")) {
-                } else {
+                if (Config.get("BACKUP") != Config.get("CONTENT")) {
                     logger.info("检测到公告变更，正在处理...");
                     UPDATE_BACKUP(true);
                 }
@@ -114,8 +95,7 @@ function regCommand() {
             if (Config.get("BACKUP") == "") {
                 UPDATE_BACKUP();
             } else {
-                if (Config.get("BACKUP") == Config.get("CONTENT")) {
-                } else {
+                if (Config.get("BACKUP") != Config.get("CONTENT")) {
                     logger.info("检测到公告变更，正在处理...");
                     UPDATE_BACKUP(true);
                 }
@@ -128,9 +108,9 @@ function regCommand() {
 
 /**
  * 更新备份
- * @param {Boolean} ClearPlayer 是否清除玩家 默认false
+ * @param ClearPlayer 是否清除玩家 默认false
  */
-function UPDATE_BACKUP(ClearPlayer = false) {
+function UPDATE_BACKUP(ClearPlayer = false): void {
     if (ClearPlayer) {
         // 清除保存的玩家
         const tmp = Config.get("CLOSED_PLAYERS");
@@ -201,10 +181,10 @@ function MainGUI(pl: Player, num?: number) {
 }
 
 // 关闭提示
-const Gm_Tell = `§l§6[§e${PLUGINS_NAME}§6] §d`;
+const Gm_Tell = `§l§6[§e${PLUGIN.name}§6] §d`;
 function Close_Tell(pl: Player) {
     pl.tell(Gm_Tell + Config.get("PROMPT_CONTENT"));
 }
 // 输出插件信息
-colorLog("green", `插件版本: ${PLUGINS_VERSION}`);
-colorLog("green", `插件作者: ${PLUGINS_ZZ}`);
+colorLog("green", `插件版本: ${PLUGIN.name}`);
+colorLog("green", `插件作者: engsr6982`);
