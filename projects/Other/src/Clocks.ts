@@ -1,29 +1,16 @@
-/********************#注册插件#********************/
-const PLUHINS_NAME = "CLOCKS";
-const PLUHINS_JS = "CLOCKS进服欢迎";
-// @ts-ignore
-const PLUGINS_ZZ = "engsr6982";
-// @ts-ignore
-const PLUGINS_VERSION = [3, 1, 0];
-// @ts-ignore
-const PLUGINS_URL = "https://www.minebbs.com/resources/clocks-_.4804/";
+const PLUGINS = {
+    name: "Clocks",
+    version: "3.2.0",
+    author: "engsr6982",
+};
 
-ll.registerPlugin(
-    /* name */ PLUHINS_NAME,
-    /* introduction */ PLUHINS_JS,
-    /* version */ PLUGINS_VERSION,
-    /* otherInformation */ {
-        作者: PLUGINS_ZZ,
-        发布链接: PLUGINS_URL,
-    },
-);
-const Gm_tell = `§l§d[${PLUHINS_NAME}] §e`;
+const Gm_tell = `§l§d[${PLUGINS.name}] §e`;
 //设置日志头
-logger.setTitle(`${PLUHINS_NAME}`);
+logger.setTitle(`${PLUGINS.name}`);
 logger.setConsole(true, 4);
 
 /********************#配置文件#********************/
-const _filePath = `.\\Plugins\\engsr6982\\${PLUHINS_NAME}\\`;
+const _filePath = `.\\Plugins\\Clocks\\${PLUGINS.name}\\`;
 // @ts-ignore
 const Config = data.openConfig(
     _filePath + "Config.json",
@@ -146,7 +133,7 @@ class Setting {
     static Main(pl: Player) {
         const fm = mc
             .newSimpleForm()
-            .setTitle(PLUHINS_NAME + " 插件设置")
+            .setTitle(PLUGINS.name + " 插件设置")
             .setContent("请选择一项操作")
             .addButton("功能管理", "textures/ui/settings_glyph_color_2x.png")
             .addButton("欢迎设置", "textures/ui/settings_glyph_color_2x.png")
@@ -175,7 +162,7 @@ class Setting {
 
     static ModSeting(player: Player) {
         const fm_1 = mc.newCustomForm();
-        fm_1.setTitle(PLUHINS_NAME + " 功能管理");
+        fm_1.setTitle(PLUGINS.name + " 功能管理");
         fm_1.addSwitch("§l§a|§r§e注册命令\n§a关闭后将无法通过/clock获取钟", Boolean(Config.get("REG_COMMAND")).valueOf());
         fm_1.addSwitch("§l§a|§r§e注册设置命令\n§a关闭后将无法打开本设置页面", Boolean(Config.get("REG_SET_COMMAND")).valueOf());
         fm_1.addSwitch("§l§a|§r§e启用主标题\n§a关闭后将不再显示主标题", Boolean(Config.get("MAIN_TITLE_SWITCH")).valueOf());
@@ -194,7 +181,7 @@ class Setting {
             Config.set("CHAT_WELCOME_SWITCH", data_1[4]);
             Config.set("RETURN_PROMPT_SWITCH", data_1[5]);
             Config.set("PERMISSION_MODE", data_1[6]);
-            player.sendModalForm(PLUHINS_NAME, "设置完成，请选择一个操作", "返回上一级", "关闭表单", (pl, res_1) => {
+            player.sendModalForm(PLUGINS.name, "设置完成，请选择一个操作", "返回上一级", "关闭表单", (pl, res_1) => {
                 switch (res_1) {
                     case true:
                         Setting.Main(pl);
@@ -208,7 +195,7 @@ class Setting {
 
     static WelcomeSettings(player: Player) {
         const fm = mc.newCustomForm();
-        fm.setTitle(PLUHINS_NAME + " 欢迎设置");
+        fm.setTitle(PLUGINS.name + " 欢迎设置");
         fm.addInput("主标题内容", "str", Config.get("MAIN_TITLE_TEXT"));
         fm.addInput("副标题内容", "str", Config.get("SUBTITLE_TEXT"));
         fm.addInput("聊天栏内容", "str", Config.get("CHAT_WELCOME_TEXT"));
@@ -221,7 +208,7 @@ class Setting {
             Config.set("SUBTITLE_TEXT", data_2[1]);
             Config.set("CHAT_WELCOME_TEXT", data_2[2]);
             Config.set("RETURN_PROMPT_TEXT", data_2[3]);
-            pl.sendModalForm(PLUHINS_NAME, "设置完成，请选择一个操作", "返回上一级", "关闭表单", (pl, res_2) => {
+            pl.sendModalForm(PLUGINS.name, "设置完成，请选择一个操作", "返回上一级", "关闭表单", (pl, res_2) => {
                 switch (res_2) {
                     case true:
                         Setting.Main(pl);
@@ -235,7 +222,7 @@ class Setting {
 
     static ReloadPlugin(player: Player) {
         player.sendModalForm(
-            PLUHINS_NAME + " §c警告！",
+            PLUGINS.name + " §c警告！",
             "§c警告，你正在进行热重载插件\n使用此功能前需确保未更改插件默认名称,如有更改导致重载失败和报错请自行解决\n如果重载后功能异常请删除配置文件重启服务器",
             "返回上一级",
             "我已确认风险 继续重载",
@@ -285,7 +272,5 @@ mc.listen("onServerStarted", () => {
     regCommand();
 });
 
-/********************#输出日志#********************/
-logger.info(`版本:${PLUGINS_VERSION}`);
-logger.info(`§a作者：${PLUGINS_ZZ}`);
-logger.info(`§a发布链接：${PLUGINS_URL}`);
+logger.info(`版本:${PLUGINS.version}`);
+logger.info(`§a作者：${PLUGINS.author}`);
