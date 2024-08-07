@@ -1,7 +1,7 @@
 const pluginInformation = {
     name: "UMenu",
     introduce: "菜单插件",
-    version: [1, 2, 0],
+    version: [1, 3, 0],
     author: "engsr6982",
 };
 
@@ -741,10 +741,10 @@ const onUMenuFormCallBack = new VirtualEvent("onUMenuFormCallBack");
 // ================================================================================ plugin end
 
 // 初始化文件
-fileSystem.initConfig();
-fileSystem.initDefaultEntry();
 file.mkdir(`.\\plugins\\UMenu\\eval`);
 file.mkdir(`.\\plugins\\UMenu\\form`);
+fileSystem.initConfig();
+fileSystem.initDefaultEntry();
 
 // 初始化预定变量系统
 PdvSystem.pdvs = [

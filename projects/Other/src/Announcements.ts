@@ -156,7 +156,7 @@ function MainGUI(pl: Player, num?: number) {
             Close_Tell(pl);
             return;
         }
-        logger.info(JSON.stringify(dt));
+        // logger.info(JSON.stringify(dt));
         if (Config.get("NO_PROMPT_SWITCH")) {
             const index = Number(dt[1]);
             const closedPlayers = Config.get("CLOSED_PLAYERS");
